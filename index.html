@@ -3,113 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salva Animales 🐾 | Dona Ahora</title>
+<title>Beast Mode Store by Gera</title>
 <style>
-:root {
-  --bg:#fef9f4;
-  --accent:#ff9800;
-  --btn:#ff5722;
-  --btn-hover:#e64a19;
-  --text:#333;
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body {
+  margin: 0;
+  background: #0e0e0e;
+  color: #fff;
 }
-
-body, html { margin:0; padding:0; font-family:Arial,sans-serif; scroll-behavior:smooth; background:var(--bg); }
-
-.hero {
-  height:100vh;
-  background-image:url('https://place-puppy.com/1600x900');
-  background-attachment:fixed;
-  background-position:center;
-  background-size:cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  color:white;
-  text-align:center;
-  padding:0 20px;
+header {
+  text-align: center;
+  padding: 40px 20px;
 }
-
-.hero h1 { font-size:3em; text-shadow:2px 2px 10px rgba(0,0,0,0.5); margin:0; }
-.hero p { font-size:1.2em; margin:20px 0 40px 0; text-shadow:1px 1px 8px rgba(0,0,0,0.5); }
-
-.btn-donar {
-  padding:15px 35px;
-  background:var(--btn);
-  color:white;
-  font-weight:bold;
-  font-size:18px;
-  border-radius:12px;
-  text-decoration:none;
-  transition: background 0.3s, transform 0.2s;
-  box-shadow:0 6px 15px rgba(0,0,0,0.3);
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
-.btn-donar:hover { background:var(--btn-hover); transform:scale(1.05); }
-
-section { padding:80px 20px; text-align:center; max-width:900px; margin:auto; }
-section h2 { color:var(--accent); font-size:2em; margin-bottom:20px; }
-section p { font-size:1.1em; color:var(--text); line-height:1.6; }
-
-.cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:40px; }
-.card { background:white; border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,0.1); overflow:hidden; max-width:280px; text-align:center; transition: transform 0.3s; }
-.card img { width:100%; display:block; }
-.card h3 { color:var(--accent); margin:15px 0 10px 0; }
-.card p { padding:0 15px 15px 15px; color:#555; font-size:0.95em; }
-.card .btn-card { display:block; margin:15px auto 20px auto; padding:12px 25px; background:var(--btn); color:white; text-decoration:none; border-radius:12px; font-weight:bold; transition: background 0.3s; }
-.card .btn-card:hover { background:var(--btn-hover); }
-.card:hover { transform: translateY(-8px); }
-
-.btn-flotante {
-  position:fixed; bottom:30px; right:30px; z-index:1000;
-  padding:18px 30px; background:var(--btn); color:white; font-weight:bold;
-  border-radius:50px; text-decoration:none; font-size:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.3); transition:background 0.3s, transform 0.2s;
+header p {
+  color: #b5ff00;
+  font-size: 1.1rem;
 }
-.btn-flotante:hover { background:var(--btn-hover); transform: scale(1.1); }
-
-footer { background:#fff3e0; padding:30px 20px; text-align:center; color:#888; }
-
-@media(max-width:768px){ .cards { flex-direction:column; align-items:center; } }
+section {
+  padding: 30px 20px;
+}
+h2 {
+  border-left: 5px solid #b5ff00;
+  padding-left: 10px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  text-align: center;
+}
+.card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #b5ff00, #5eff00);
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #b5ff00;
+}
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+  padding: 20px;
+}
+.tag {
+  color: #ff9f00;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
 </style>
 </head>
+
 <body>
 
-<div class="hero">
-  <h1>Salva Animales 🐾</h1>
-  <p>Tu ayuda puede cambiar la vida de muchos animales en situación vulnerable.</p>
-  <a href="https://mpago.la/2ScZeJ8" target="_blank" class="btn-donar">Dona Ahora</a>
-</div>
+<header>
+  <h1>🦍 Beast Mode Store by Gera</h1>
+  <p>Solo fierro. Solo resultados.<br>Lo que uso, lo que recomiendo.</p>
+</header>
 
+<!-- PROTEÍNAS -->
 <section>
-  <h2>¿Por qué donar?</h2>
-  <p>Con tu donación, podemos dar alimento, medicinas y refugio a animales que lo necesitan. Cada aporte, por pequeño que sea, salva vidas.</p>
-
-  <div class="cards">
-    <div class="card">
-      <img src="https://place-puppy.com/400x300" alt="Perro feliz">
-      <h3>Perros en refugio</h3>
-      <p>Alimenta y cuida a perros rescatados de la calle o abandono.</p>
-      <a href="https://mpago.la/2ScZeJ8" target="_blank" class="btn-card">Donar</a>
-    </div>
-    <div class="card">
-      <img src="https://placekitten.com/400/300" alt="Gato feliz">
-      <h3>Gatos necesitados</h3>
-      <p>Brinda vacunas, comida y atención a gatos que necesitan un hogar seguro.</p>
-      <a href="https://mpago.la/2ScZeJ8" target="_blank" class="btn-card">Donar</a>
-    </div>
-    <div class="card">
-      <img src="https://placebear.com/400/300" alt="Otros animales">
-      <h3>Otros animales</h3>
-      <p>Ayuda a conejos, aves y otros animales pequeños que dependen de nuestra ayuda.</p>
-      <a href="https://mpago.la/2ScZeJ8" target="_blank" class="btn-card">Donar</a>
-    </div>
-  </div>
+<h2>💪 Proteínas</h2>
+<div class="products">
+<div class="card"><div class="tag">🔥 Alta demanda</div><p>Proteína recomendada</p><a class="btn" href="https://meli.la/32Awzyk" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/31RaRKY" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/1g5Qfu9" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/16TaLXz" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/1dMMPdr" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/2iwBD9N" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/2ymUSPu" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/2f3CCYH" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/2W2oUKH" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/1WxScVG" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Proteína recomendada</p><a class="btn" href="https://meli.la/2GRjsR1" target="_blank">Comprar ahora</a></div>
+</div>
 </section>
 
-<a href="https://mpago.la/2ScZeJ8" target="_blank" class="btn-flotante">Dona Ahora 🐾</a>
+<!-- PREWORK -->
+<section>
+<h2>⚡ Preentreno</h2>
+<div class="products">
+<div class="card"><div class="tag">⚡ Beast Approved</div><p>Preentreno potente</p><a class="btn" href="https://meli.la/1LG9evv" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Preentreno potente</p><a class="btn" href="https://meli.la/1bKPYcq" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Preentreno potente</p><a class="btn" href="https://meli.la/2q8LWNk" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Preentreno potente</p><a class="btn" href="https://meli.la/1bpnsem" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Preentreno potente</p><a class="btn" href="https://meli.la/1apFzU1" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Preentreno potente</p><a class="btn" href="https://meli.la/1wyXXW6" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Preentreno potente</p><a class="btn" href="https://meli.la/1FzrmYi" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Preentreno potente</p><a class="btn" href="https://meli.la/1CARmMs" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Preentreno potente</p><a class="btn" href="https://meli.la/1yi5V8j" target="_blank">Comprar ahora</a></div>
+</div>
+</section>
+
+<!-- CREATINA -->
+<section>
+<h2>🧬 Creatina</h2>
+<div class="products">
+<div class="card"><p>Creatina top ventas</p><a class="btn" href="https://meli.la/1UPMBNf" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Creatina top ventas</p><a class="btn" href="https://meli.la/2QccRfM" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Creatina top ventas</p><a class="btn" href="https://meli.la/1V8cDwM" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Creatina top ventas</p><a class="btn" href="https://meli.la/2PVgEit" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Creatina top ventas</p><a class="btn" href="https://meli.la/2G7S2WS" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Creatina top ventas</p><a class="btn" href="https://meli.la/14iMcW4" target="_blank">Comprar ahora</a></div>
+</div>
+</section>
+
+<!-- ROPA -->
+<section>
+<h2>👕 Ropa Gym</h2>
+<div class="products">
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/2FdVRuY" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/14GxjMB" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/2W6RttE" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/1jX57Pe" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/2XPaAdr" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/2wdsB7j" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/1mFGCqD" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/16JmWKU" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/1ozbXtr" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/1SYBqEM" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/21RexMG" target="_blank">Comprar ahora</a></div>
+<div class="card"><p>Ropa gym recomendada</p><a class="btn" href="https://meli.la/1Eu6HDu" target="_blank">Comprar ahora</a></div>
+</div>
+</section>
 
 <footer>
-  &copy; 2026 Salva Animales. Todos los derechos reservados.
+Algunos enlaces pueden generar comisión sin costo extra para ti.
 </footer>
 
 </body>
